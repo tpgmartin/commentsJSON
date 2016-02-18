@@ -7,12 +7,13 @@ module.exports = {
     return file;
   },
 
-  parse: function (json) {
+  parse: function (json, commentIndicator) {
     var fileArr = fs.readFileSync(json, 'utf8').split('\n');
+    var commentIndicator = commentIndicator || '//';
 
     return fileArr.map(function (l) {
-      if (l.trim().indexOf('//') === 0) {
-        return l = '"_comment": "' + l.trim().slice(2).trim() + '",';
+      if (l.trim().indexOf(commentIndicator) === 0) {
+        return l = '"_comment": "' + l.trim().slice(commentIndicator.length).trim() + '",';
       } else {
         return l;
       }

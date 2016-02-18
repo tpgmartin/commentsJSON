@@ -17,4 +17,12 @@ describe('commentJSON', function() {
 
     assert.equal(output, '{"_comment": "This is a comment",  "key1": "value1",   "key2": "value2"}');
   });
+
+  it('should parse file with custom indicator', function () {
+    var input = './test/test_with_custom_comment_indicator.json';
+
+    var output = commentJSON.parse(input, '#');
+
+    assert.equal(output, '{"_comment": "This is a comment",  "key1": "value1",   "key2": "value2"}');
+  });
 });
