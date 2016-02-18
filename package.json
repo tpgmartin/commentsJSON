@@ -1,0 +1,22 @@
+{
+  "name": "commentsJSON",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha -w test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpgmartin/commentsJSON.git"
+  },
+  "author": "Tom Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpgmartin/commentsJSON/issues"
+  },
+  "homepage": "https://github.com/tpgmartin/commentsJSON",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
