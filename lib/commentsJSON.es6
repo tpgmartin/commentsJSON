@@ -1,15 +1,13 @@
-'use strict';
-
 var fs = require('fs');
 
 module.exports = {
 
-  read: function read(json) {
+  read: function (json) {
     file = fs.readFileSync(json, 'utf8').replace(/\n/g, "");
     return file;
   },
 
-  parse: function parse(json, commentIndicator) {
+  parse: function (json, commentIndicator) {
     var fileArr = fs.readFileSync(json, 'utf8').split('\n');
     var commentIndicator = commentIndicator || '//';
 
@@ -20,6 +18,7 @@ module.exports = {
         return l;
       }
     }).join('');
+
   }
 
 };
